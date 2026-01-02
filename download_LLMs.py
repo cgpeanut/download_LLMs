@@ -1,14 +1,12 @@
-import subprocess # just to call an arbitrary command e.g. 'ls'
-
-# enter the directory like this:
-with cd("~/LLMs"):
-   # we are in ~/Library
-   subprocess.call("ls")
-
-# outside the context manager we are back wherever we started.
-
-
-
+import os
+# Get the current working directory
+current_directory = os.getcwd()
+print("Current Directory:", current_directory)
+# Change the working directory
+os.chdir("/home/roxasrr/LLMs")
+# Verify the change
+new_directory = os.getcwd()
+print("New Directory:", new_directory)
 
 
 #from huggingface_hub import snapshot_download
